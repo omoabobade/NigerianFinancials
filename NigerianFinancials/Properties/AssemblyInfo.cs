@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("NigerianFinancials")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Library with collection of useful resource on Nigerian financial space.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("HP Inc.")]
+[assembly: AssemblyCompany("Kolawole Abobade, Dayo Okesola")]
 [assembly: AssemblyProduct("NigerianFinancials")]
 [assembly: AssemblyCopyright("Copyright © HP Inc. 2020")]
 [assembly: AssemblyTrademark("")]

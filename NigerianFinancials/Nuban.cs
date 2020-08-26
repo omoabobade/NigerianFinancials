@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NigerianFinancials
 {
-    public class Financials {
+    public class Nuban {
         /**
          * Summary:
          * Predicts possible banks from a supplied System.String object representing a recognised nuban bank account
@@ -19,17 +19,17 @@ namespace NigerianFinancials
          *  THis returns a System.Collection.Generic.List of type String representing the predicated Nigerian banks
          * 
          */
-        public List<string> PredictBank(string nuban)
+        public static List<string> PredictBank(string nuban)
         {
             string result = string.Empty;
 
             var section = GetBanks();
 
-            List<string> bankNames = section.Where(item => verifyNubanCheckDigit(item.bankcode, nuban)).Select(item => item.bankname).ToList();
+            List<string> bankNames = section.Where(item => VerifyNubanCheckDigit(item.bankcode, nuban)).Select(item => item.bankname).ToList();
             return bankNames;
         }
 
-        public List<Bank> GetBanks()
+        public static List<Bank> GetBanks()
         {
             return new List<Bank>
             {
@@ -69,7 +69,7 @@ namespace NigerianFinancials
             };
         }
 
-        private bool verifyNubanCheckDigit(string bankcode, string nuban)
+        private static bool VerifyNubanCheckDigit(string bankcode, string nuban)
         {
             bool isValidNuban = false;
             nuban = bankcode + nuban.Trim();
